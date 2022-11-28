@@ -23,8 +23,8 @@ public class EotinishTest {
             "kk, Менің өтініштерім",
             "ru, Мои обращения"
     })
-    void checkTextInHeaderLocal(String locale, String elemHeader) {
+    void checkTextInHeaderLocal(String locale, String buttons) {
         open(locale);
-        $(by("data-test-id", "myAppealsBtn")).$(byText(elemHeader)).shouldBe(visible);
+        $(by("data-test-id", "myAppealsBtn")).$(byText(buttons)).shouldBe(visible);
     }
 }

@@ -43,7 +43,6 @@ public class KolesaWebTest {
 
     void kolesaTest(String searchForm, List <String> filters) {
         $(".action-list").$(byText(searchForm)).click();
-        //$(by("data-id", "2")).click();
         $$(".secondary>.element-group").filter(visible).shouldHave(CollectionCondition.texts(filters));
 
     }
